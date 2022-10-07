@@ -62,8 +62,6 @@ const ProducDetail = () => {
                 <Link to={`/product/${products.id}`}>
                   {products.title} 
                   <img style={{objectFit: "contain", height: "150px"}} className='img-fluid' src={products.productImgs} /> <br />  Price: <br />{products.price} 
-                  <button  style={{ backgroundImage: "url(/Img/carrito-de-compras.png)", 
-                  width: "35px", height: "35px", borderRadius: "50px", backgroundPosition: "center", marginLeft: "85px"}}></button>
                 </Link>
               </ListGroup.Item>
             ))

@@ -71,7 +71,7 @@ const Home = () => {
             value={searchValue}
           />
           <Button variant="dark" onClick={searchProduct}>
-            Button
+            Search Product
           </Button>
         </InputGroup>
 
