@@ -138,3 +138,15 @@ button:hover {
   background: white !important;
   width: 700px;
 }
+
+.fa-solid {
+  font-size: 30px;
+  margin-left: 45px;
+}
+
+.logo {
+  width: 50px;
+  height: 75px;
+  background-image: url(/Img/logo.png);
+  background-position: center;
+}

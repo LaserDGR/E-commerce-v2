@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
-import { Col, ListGroup, Row } from 'react-bootstrap';
+import { Carousel, Col, ListGroup, Row } from 'react-bootstrap';
 import { addProductThunk } from '../store/slices/carSidebar.slice';
 
 const ProducDetail = () => {
@@ -29,8 +29,19 @@ const ProducDetail = () => {
   return (
     <Row>
       <Col style={{textAlign: "center"}}>
-        <h1>{producttDetail?.title}</h1>
-        <img className='img-fluid' style={{objectFit: "contain", height: "450px"}} src={producttDetail?.productImgs} alt="" />
+        <h1 style={{color: "white"}}>{producttDetail?.title}</h1>
+        <Carousel fade variant='dark'>
+        {
+          producttDetail?.productImgs.map((product) => (
+            <Carousel.Item key={product.id}>
+              <img className="d-block w-100" 
+                src={product}
+                alt="First slide"  style={{objectFit: "contain", height: "350px", background: "white", marginBottom: "50px", padding: "25px", boxShadow: "0 0 10px black, 0 0 40px black, 0 0 80px black", border: "7px solid black"}}
+              />
+            </Carousel.Item>
+          ))
+        }
+      </Carousel>
         <p style={{marginTop: "30px", fontSize: "17px"}} className="pH">{producttDetail?.description}</p>
         <p className='price'>Price: <br />${producttDetail?.price}</p>
         <div className='quantity'>

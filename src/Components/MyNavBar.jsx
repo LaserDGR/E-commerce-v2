@@ -20,16 +20,17 @@ const MyNavBar = () => {
 
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar bg="black" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand to="/" as={Link}>Navbar</Navbar.Brand>
+          <div className='logo'></div><Navbar.Brand to="/" as={Link}>TechnologyCommerce </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link to="/login" as={Link}>Login</Nav.Link>
-              <Nav.Link to="/car" as={Link}>Purchases</Nav.Link>
-              <Nav.Link onClick={handleShow} >Carrito De Compras</Nav.Link>
-              <Nav.Link onClick={logout}>Logout</Nav.Link>
+            <Nav className="me-auto" style={{marginLeft: "300px"}}>
+              <Nav.Link to="/login" as={Link}><i class="fa-solid fa-user"></i></Nav.Link>
+              <Nav.Link to="/car" as={Link}><i class="fa-solid fa-bag-shopping"></i></Nav.Link>
+              <Nav.Link onClick={handleShow} ><i class="fa-solid fa-cart-shopping"></i></Nav.Link>
+              <Nav.Link href='https://e-commerce-hmdgr.netlify.app/'><i class="fa-solid fa-shoe-prints"></i></Nav.Link>
+              <Nav.Link onClick={logout}><i class="fa-solid fa-right-from-bracket"></i></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

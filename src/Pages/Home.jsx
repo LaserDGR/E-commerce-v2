@@ -80,13 +80,10 @@ const Home = () => {
             <Col key={product.id}>
               <Card onClick={() => navigate(`/product/${product.id}`)} className="HomeProduct" style={{ color: "black", boxShadow: "0 0 10px lavender, 0 0 40px lavender, 0 0 80px lavender", border: "8px solid lavender" }}>
                 <Card.Img variant="top" src={product.productImgs} style={{ height: "200px", margin: "0 auto", objectFit: "contain" }} />
-                <Card.Body>
+                <Card.Body style={{textAlign: "center"}}>
                   <Card.Title>{product.title}</Card.Title>
                   <Card.Text>
-                    <b>Price: </b><br />{product.price}   <br /> <button
-                     style={{ backgroundImage: "url(/Img/carrito-de-compras.png)", 
-                     width: "35px", height: "35px", borderRadius: "50px", backgroundPosition: "center", marginLeft: "85px"}}
-                     ></button>
+                    <b>Price: </b><br />{product.price}   <br /> 
                   </Card.Text>
                 </Card.Body>
               </Card>
